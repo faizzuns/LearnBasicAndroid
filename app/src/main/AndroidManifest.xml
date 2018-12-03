@@ -9,9 +9,7 @@
         android:roundIcon="@drawable/user"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -20,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FriendsActivity" />
+        <activity android:name=".AddFriendActivity" />
+        <activity android:name=".ResultAddFriendActivity"></activity>
     </application>
 
 </manifest>
