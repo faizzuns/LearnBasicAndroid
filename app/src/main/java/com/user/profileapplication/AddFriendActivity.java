@@ -24,7 +24,6 @@ public class AddFriendActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_friend);
 
         Spinner spinner = findViewById(R.id.spinner_tingkatan);
-
         // Spinner Drop down elements
         final List<String> tingkatan = new ArrayList<String>();
         tingkatan.add("SD");
@@ -34,24 +33,19 @@ public class AddFriendActivity extends AppCompatActivity {
         tingkatan.add("Kantor");
         tingkatan.add("Tetangga");
         tingkatan.add("Lainnya");
-
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, tingkatan);
-
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(), tingkatan.get(i) + " clicked", Toast.LENGTH_SHORT).show();
                 index = i;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 Toast.makeText(getApplicationContext(), "Nothing Selected", Toast.LENGTH_SHORT).show();
