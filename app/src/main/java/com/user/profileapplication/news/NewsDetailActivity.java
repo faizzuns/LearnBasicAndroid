@@ -1,4 +1,4 @@
-package com.user.profileapplication.news.response;
+package com.user.profileapplication.news;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

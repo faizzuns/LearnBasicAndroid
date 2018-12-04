@@ -24,7 +24,7 @@
         <activity android:name=".AddFriendActivity" />
         <activity android:name=".ResultAddFriendActivity" />
         <activity android:name=".news.NewsActivity" />
-        <activity android:name=".news.response.NewsDetailActivity"></activity>
+        <activity android:name=".news.NewsDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 
 import com.user.profileapplication.R;
 import com.user.profileapplication.news.response.Article;
-import com.user.profileapplication.news.response.NewsDetailActivity;
 import com.user.profileapplication.news.response.NewsResponse;
 
 import java.util.ArrayList;
