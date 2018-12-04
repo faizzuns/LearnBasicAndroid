@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.user.profileapplication.news.NewsActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AddFriendActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnNews = findViewById(R.id.btn_news);
+        btnNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
                 startActivity(intent);
             }
         });
