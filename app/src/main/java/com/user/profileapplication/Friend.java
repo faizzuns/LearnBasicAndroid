@@ -1,8 +1,18 @@
 package com.user.profileapplication;
 
-public class Friend {
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
+
+@Table(database = MyDatabase.class)
+public class Friend extends BaseModel {
+    @PrimaryKey
+    @Column
     private String nama;
+    @Column
     private int umur;
+    @Column
     private String tingkatan;
 
     public Friend() {

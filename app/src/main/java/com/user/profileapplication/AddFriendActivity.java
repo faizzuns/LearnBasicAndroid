@@ -62,6 +62,8 @@ public class AddFriendActivity extends AppCompatActivity {
                 if (edtNama.getText().toString().length() == 0 || edtUmur.getText().toString().length() == 0) {
                     Toast.makeText(getApplicationContext(), "All field must have value", Toast.LENGTH_SHORT).show();
                 } else {
+                    Friend friend = new Friend(edtNama.getText().toString(), Integer.parseInt(edtUmur.getText().toString()), tingkatan.get(index));
+                    friend.save();
                     Intent intent = new Intent(getApplicationContext(), ResultAddFriendActivity.class);
                     intent.putExtra("nama", edtNama.getText().toString());
                     intent.putExtra("umur", Integer.parseInt(edtUmur.getText().toString()));

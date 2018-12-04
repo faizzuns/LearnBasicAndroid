@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.raizlabs.android.dbflow.config.FlowConfig;
+import com.raizlabs.android.dbflow.config.FlowManager;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -22,5 +25,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         }, 2500);
+
+        FlowManager.init(new FlowConfig.Builder(this).build());
     }
 }

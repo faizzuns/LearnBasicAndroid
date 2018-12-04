@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.raizlabs.android.dbflow.sql.language.Select;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +33,9 @@ public class FriendsActivity extends AppCompatActivity {
         });
         rvFriends.setAdapter(adapter);
 
-        listFriend.add(new Friend("Ahmad", 22, "SD"));
-        listFriend.add(new Friend("Faiz", 28, "SMP"));
-        listFriend.add(new Friend("Joko", 21, "SMA"));
-        listFriend.add(new Friend("Anwar", 23, "Mahasiswa"));
-        listFriend.add(new Friend("Surapati", 25, "Tetangga"));
+        listFriend = new Select()
+                .from(Friend.class)
+                .queryList();
         adapter.refreshData(listFriend);
     }
 }
