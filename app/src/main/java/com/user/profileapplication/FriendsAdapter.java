@@ -56,6 +56,9 @@ public class FriendsAdapter extends RecyclerView.Adapter<FriendsAdapter.ViewHold
             @Override
             public void onClick(View view) {
                 listener.onFriendClicked(friend);
+                friends.remove(friend);
+                friend.delete();
+                notifyDataSetChanged();
             }
         });
     }

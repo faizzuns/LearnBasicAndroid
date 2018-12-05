@@ -25,10 +25,10 @@ public class FriendsActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
         rvFriends.setLayoutManager(llm);
         List<Friend> listFriend = new ArrayList<>();
-        FriendsAdapter adapter = new FriendsAdapter(listFriend, new FriendListener() {
+        final FriendsAdapter adapter = new FriendsAdapter(listFriend, new FriendListener() {
             @Override
             public void onFriendClicked(Friend friend) {
-                Toast.makeText(getApplicationContext(), friend.getNama() + " Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), friend.getNama() + " Deleted", Toast.LENGTH_SHORT).show();
             }
         });
         rvFriends.setAdapter(adapter);
